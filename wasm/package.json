@@ -1,0 +1,12 @@
+{
+  "name": "solgb_wasm",
+  "version": "0.1.0",
+  "files": [
+    "solgb_wasm_bg.wasm",
+    "solgb_wasm.js",
+    "solgb_wasm.d.ts"
+  ],
+  "module": "solgb_wasm.js",
+  "types": "solgb_wasm.d.ts",
+  "sideEffects": false
+}
