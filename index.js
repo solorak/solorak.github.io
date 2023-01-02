@@ -2,7 +2,17 @@ import init, {init_js} from "./wasm/solgb_wasm.js";
 
 init().then(() => {
 
-    init_js();
+    let handle = init_js();
+
+    const load_button = document.getElementById("load rom");
+    load_button.addEventListener("click", () => {
+        handle.load();
+    });
+
+    const load_bootrom_button = document.getElementById("load boot rom");
+    load_bootrom_button.addEventListener("click", () => {
+        handle.load_bootrom();
+    });
 
     // let handle = null;
     // const play_button = document.getElementById("start");

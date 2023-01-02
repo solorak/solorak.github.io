@@ -1,6 +1,10 @@
 /* tslint:disable */
 /* eslint-disable */
-export function init_js(): void;
+export function __wbg_wasmgameboy_free(a: number): void;
+export function wasmgameboy_new(): number;
+export function wasmgameboy_load_bootrom(a: number): number;
+export function wasmgameboy_load(a: number): number;
+export function init_js(): number;
 export function dummy_main(): void;
 export function __wbg_wasmaudioprocessor_free(a: number): void;
 export function wasmaudioprocessor_process(a: number, b: number, c: number): number;

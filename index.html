@@ -13,14 +13,67 @@
       body {
         background-color: #222
       }
+      .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 40px;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+      }
+
+      .sidebar input {
+        padding: 8px;
+        width: 100%;
+        font-size: 24px;
+        background-color: #444;
+        color: white;
+        display: block;
+      }
+
+      .sidebar_button {
+        padding: 8px;
+        width: auto;
+        font-size: 24px;
+        background-color: #444;
+        color: white;
+        display: block;
+      }
+
+      /* input {
+        color: red;
+        padding: 8px;
+        font-size: 24px;
+        display: block;
+      } */
       </style>
-      <script src="enable-threads.js"></script>
+      <script>
+        function openNav() {
+          document.getElementById("sidebar").style.width = "33%";
+          // document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("sidebar").style.width = "0";
+          // document.getElementById("main").style.marginLeft= "0";
+        }
+      </script>
+	  <script src="enable-threads.js"></script>
   </head>
   <body>
-    <!-- <div id="controls">
-      <input id="load" type="button" value="load"/>
-    </div> -->
-    <div id="gb" class="center"></div>
+    <div id="sidebar" class="sidebar">
+      <input type="button" value="x" onclick="closeNav()" style="text-align: right;"/>
+      <input id="load boot rom" type="button" value="Load Boot ROM"/>
+      <input id="load rom" type="button" value="Open ROM"/>
+    </div>
+
+    <div id="main">
+      <input class="sidebar_button" type="button" value="☰" onclick="openNav()"/>
+      <div id="gb" class="center"></div>
+    </div>
     <script type="module" src="index.js"></script>
   </body>
 </html>

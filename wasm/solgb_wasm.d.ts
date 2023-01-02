@@ -4,8 +4,9 @@
 */
 export function dummy_main(): void;
 /**
+* @returns {WasmGameboy}
 */
-export function init_js(): void;
+export function init_js(): WasmGameboy;
 /**
 * Entry point for web workers
 * @param {number} ptr
@@ -30,11 +31,32 @@ export class WasmAudioProcessor {
 */
   static unpack(val: number): WasmAudioProcessor;
 }
+/**
+*/
+export class WasmGameboy {
+  free(): void;
+/**
+* @returns {WasmGameboy}
+*/
+  static new(): WasmGameboy;
+/**
+* @returns {Promise<void>}
+*/
+  load_bootrom(): Promise<void>;
+/**
+* @returns {Promise<void>}
+*/
+  load(): Promise<void>;
+}
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
-  readonly init_js: () => void;
+  readonly __wbg_wasmgameboy_free: (a: number) => void;
+  readonly wasmgameboy_new: () => number;
+  readonly wasmgameboy_load_bootrom: (a: number) => number;
+  readonly wasmgameboy_load: (a: number) => number;
+  readonly init_js: () => number;
   readonly dummy_main: () => void;
   readonly __wbg_wasmaudioprocessor_free: (a: number) => void;
   readonly wasmaudioprocessor_process: (a: number, b: number, c: number) => number;
