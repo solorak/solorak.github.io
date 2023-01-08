@@ -1,15 +1,15 @@
 /* tslint:disable */
 /* eslint-disable */
-export function __wbg_wasmgameboy_free(a: number): void;
-export function wasmgameboy_new(): number;
-export function wasmgameboy_load_bootrom(a: number): number;
-export function wasmgameboy_load(a: number): number;
-export function init_js(): number;
-export function dummy_main(): void;
 export function __wbg_wasmaudioprocessor_free(a: number): void;
 export function wasmaudioprocessor_process(a: number, b: number, c: number): number;
 export function wasmaudioprocessor_pack(a: number): number;
 export function wasmaudioprocessor_unpack(a: number): number;
+export function init_js(): number;
+export function dummy_main(): void;
+export function __wbg_wasmgameboy_free(a: number): void;
+export function wasmgameboy_new(): number;
+export function wasmgameboy_load_bootrom(a: number): number;
+export function wasmgameboy_load(a: number): number;
 export function wasm_thread_entry_point(a: number): void;
 export function wgpu_compute_pass_set_pipeline(a: number, b: number): void;
 export function wgpu_compute_pass_set_bind_group(a: number, b: number, c: number, d: number, e: number): void;
@@ -62,11 +62,11 @@ export const memory: WebAssembly.Memory;
 export function __wbindgen_malloc(a: number): number;
 export function __wbindgen_realloc(a: number, b: number, c: number): number;
 export const __wbindgen_export_3: WebAssembly.Table;
-export function _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h0286f397362cd69d(a: number, b: number, c: number): void;
-export function _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h1ab9146b36120223(a: number, b: number): void;
-export function _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hbda9981a8cece3df(a: number, b: number): void;
-export function _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h26369b1a3b2437a9(a: number, b: number, c: number): void;
-export function _dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h22311850cbf0e050(a: number, b: number, c: number): void;
+export function _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h06de0452bc2ccf79(a: number, b: number, c: number): void;
+export function _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h5936f90b7e7f3c39(a: number, b: number): void;
+export function _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h318e754cc5770215(a: number, b: number): void;
+export function _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h8c93bf78e9d1844c(a: number, b: number, c: number): void;
+export function _dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h6b050123db68dd2a(a: number, b: number, c: number): void;
 export function __wbindgen_free(a: number, b: number): void;
 export function __wbindgen_exn_store(a: number): void;
 export function wasm_bindgen__convert__closures__invoke2_mut__h91f917aa1760f4be(a: number, b: number, c: number, d: number): void;

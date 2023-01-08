@@ -1,0 +1,86 @@
+.center {
+    margin: auto;
+    height: 90vh;
+    width: 90vw;
+    box-sizing: content-box;
+    border: 3px solid #555;
+    padding: 10px;
+  }
+  
+  body {
+    background-color: #222
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 8px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .sidebar_input {
+    padding: 8px;
+    width: 100%;
+    font-size: 24px;
+    background-color: #444;
+    color: white;
+    display: block;
+    border-width: 0px 2px 2px 2px;
+  }
+
+  .sidebar_title {
+    padding: 8px 8px 0px 8px;
+    width: 100%;
+    font-size: 24px;
+    font-family: sans-serif;
+    /* text-decoration: underline; */
+    background-color: #555;
+    color: white;
+    display: block;
+    border-left: 2px #111 solid;
+    border-right: 2px #111 solid;
+    border-bottom: 1px white solid;
+    box-sizing: border-box;
+  }
+
+  .sidebar_button {
+    padding: 8px;
+    width: auto;
+    font-size: 24px;
+    background-color: #444;
+    color: white;
+    display: block;
+  }
+
+  .boot_roms {
+    padding: 8px;
+    border-width: 0px 2px 1px 2px;
+    border-color:#111;
+    border-style: solid;
+    font-size: 24px;
+    background-color: #555;
+    color: white;
+    text-indent: 1em;
+  }
+
+  .radio_div {
+    align-content: center;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    font-family: sans-serif;
+  }
+
+  input:checked + label {
+    font-family: sans-serif;
+    font-weight: bold;
+  }

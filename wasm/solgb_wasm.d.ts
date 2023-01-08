@@ -52,16 +52,16 @@ export class WasmGameboy {
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
-  readonly __wbg_wasmgameboy_free: (a: number) => void;
-  readonly wasmgameboy_new: () => number;
-  readonly wasmgameboy_load_bootrom: (a: number) => number;
-  readonly wasmgameboy_load: (a: number) => number;
-  readonly init_js: () => number;
-  readonly dummy_main: () => void;
   readonly __wbg_wasmaudioprocessor_free: (a: number) => void;
   readonly wasmaudioprocessor_process: (a: number, b: number, c: number) => number;
   readonly wasmaudioprocessor_pack: (a: number) => number;
   readonly wasmaudioprocessor_unpack: (a: number) => number;
+  readonly init_js: () => number;
+  readonly dummy_main: () => void;
+  readonly __wbg_wasmgameboy_free: (a: number) => void;
+  readonly wasmgameboy_new: () => number;
+  readonly wasmgameboy_load_bootrom: (a: number) => number;
+  readonly wasmgameboy_load: (a: number) => number;
   readonly wasm_thread_entry_point: (a: number) => void;
   readonly wgpu_compute_pass_set_pipeline: (a: number, b: number) => void;
   readonly wgpu_compute_pass_set_bind_group: (a: number, b: number, c: number, d: number, e: number) => void;
@@ -114,11 +114,11 @@ export interface InitOutput {
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
   readonly __wbindgen_export_3: WebAssembly.Table;
-  readonly _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h0286f397362cd69d: (a: number, b: number, c: number) => void;
-  readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h1ab9146b36120223: (a: number, b: number) => void;
-  readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hbda9981a8cece3df: (a: number, b: number) => void;
-  readonly _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h26369b1a3b2437a9: (a: number, b: number, c: number) => void;
-  readonly _dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h22311850cbf0e050: (a: number, b: number, c: number) => void;
+  readonly _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h06de0452bc2ccf79: (a: number, b: number, c: number) => void;
+  readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h5936f90b7e7f3c39: (a: number, b: number) => void;
+  readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h318e754cc5770215: (a: number, b: number) => void;
+  readonly _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h8c93bf78e9d1844c: (a: number, b: number, c: number) => void;
+  readonly _dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h6b050123db68dd2a: (a: number, b: number, c: number) => void;
   readonly __wbindgen_free: (a: number, b: number) => void;
   readonly __wbindgen_exn_store: (a: number) => void;
   readonly wasm_bindgen__convert__closures__invoke2_mut__h91f917aa1760f4be: (a: number, b: number, c: number, d: number) => void;

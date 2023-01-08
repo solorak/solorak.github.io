@@ -1,79 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Gameboy</title>
-    <style>
-      .center {
-        margin: auto;
-        width: 480px;
-        border: 3px solid #555;
-        padding: 10px;
-      }
-      body {
-        background-color: #222
-      }
-      .sidebar {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        left: 0;
-        top: 0;
-        padding-top: 40px;
-        background-color: #111;
-        overflow-x: hidden;
-        transition: 0.5s;
-      }
-
-      .sidebar input {
-        padding: 8px;
-        width: 100%;
-        font-size: 24px;
-        background-color: #444;
-        color: white;
-        display: block;
-      }
-
-      .sidebar_button {
-        padding: 8px;
-        width: auto;
-        font-size: 24px;
-        background-color: #444;
-        color: white;
-        display: block;
-      }
-
-      /* input {
-        color: red;
-        padding: 8px;
-        font-size: 24px;
-        display: block;
-      } */
-      </style>
-      <script>
-        function openNav() {
-          document.getElementById("sidebar").style.width = "33%";
-          // document.getElementById("main").style.marginLeft = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("sidebar").style.width = "0";
-          // document.getElementById("main").style.marginLeft= "0";
-        }
-      </script>
-	  <script src="enable-threads.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="enable-threads.js"></script>
   </head>
   <body>
+    <script src="helper_functions.js"></script>
+    <script type="module" src="index.js"></script>
     <div id="sidebar" class="sidebar">
-      <input type="button" value="x" onclick="closeNav()" style="text-align: right;"/>
-      <input id="load boot rom" type="button" value="Load Boot ROM"/>
-      <input id="load rom" type="button" value="Open ROM"/>
+      <input class="sidebar_input" type="button" value="x" onclick="closeNav()" style="text-align: right;"/>
+      <input class="sidebar_input" id="load rom" type="button" value="Open ROM"/>
+      <input class="sidebar_input" id="load boot rom" type="button" value="Load Boot ROM"/>
+      <title class="sidebar_title">Boot Roms</title>
+      <div id="boot_roms" class="boot_roms"></div>
     </div>
-
     <div id="main">
       <input class="sidebar_button" type="button" value="☰" onclick="openNav()"/>
       <div id="gb" class="center"></div>
     </div>
-    <script type="module" src="index.js"></script>
   </body>
 </html>
