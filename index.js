@@ -2,13 +2,26 @@ import init, {init_js} from "./wasm/solgb_wasm.js";
 
 init().then(() => {
 
+    if (window.navigator.userAgent.includes("Firefox")) {
+        alert(
+            "This site does not work in firefox due to the inability to import from web workers. See the following bug for more information:" + 
+            "\nhttps://bugzilla.mozilla.org/show_bug.cgi?id=1572644"
+        )
+    }
+
     const handle = init_js();
+    
     update_bootroms();
+
+    // const save = JSON.parse(localStorage.getItem("WARIOLAND3"));
+    // const vals = new Uint8Array(save)
+    // download("test", vals);
 
     const load_button = document.getElementById("load rom");
     load_button.addEventListener("click", () => {
         handle.load().then(() => {
             closeNav();
+            handle.set_volume(volume_slider.value);
         });
     });
 
@@ -17,6 +30,26 @@ init().then(() => {
         handle.load_bootrom().then(() => {
             update_bootroms();
         });
+    });
+
+    const volume_slider = document.getElementById("volume_slider");
+    volume_slider.addEventListener("input", () => {
+        handle.set_volume(volume_slider.value);
+        localStorage.setItem("master_volume", volume_slider.value);
+    });
+    document.getElementById("volume_slider").value = localStorage.getItem("master_volume");
+
+
+    const upload_exram = document.getElementById("upload_exram");
+    upload_exram.addEventListener("click", () => {
+        handle.load_save();
+    });
+
+    const download_exram = document.getElementById("download_exram");
+    download_exram.addEventListener("click", () => {
+        var name = handle.get_name()
+        var data = new Uint8Array(JSON.parse(localStorage.getItem(name)));
+        download(name, data);
     });
 });
 
@@ -33,7 +66,7 @@ function update_bootroms() {
         boot_rom_names.forEach(boot_rom_name => {
             document.getElementById("boot_roms").innerHTML += boot_rom_name;
         });
-        let checked_item = localStorage.getItem("bootrom_selected");
+        let checked_item = localStorage.getItem("selected_bootrom");
         document.getElementById(checked_item).checked = true;
     }
 }

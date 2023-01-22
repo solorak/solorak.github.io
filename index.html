@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title>Gameboy</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="enable-threads.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+	<script src="enable-threads.js"></script>
     <script src="helper_functions.js"></script>
     <script type="module" src="index.js"></script>
     <div id="sidebar" class="sidebar">
@@ -15,9 +15,15 @@
       <input class="sidebar_input" id="load boot rom" type="button" value="Load Boot ROM"/>
       <title class="sidebar_title">Boot Roms</title>
       <div id="boot_roms" class="boot_roms"></div>
+      <div class="sidebar_slider_container">
+        <label for="volume_slider" style="text-align: right;">Volume:</label>
+        <input class="sidebar_slider" id="volume_slider" type="range" min="0" max="100" value="100" />
+      </div>
+      <input class="sidebar_input" id="upload_exram" type="button" value="Upload Save RAM"/>
+      <input class="sidebar_input" id="download_exram" type="button" value="Download Save RAM"/>
     </div>
     <div id="main">
-      <input class="sidebar_button" type="button" value="☰" onclick="openNav()"/>
+      <input class="sidebar_button" id="sidebar_button" type="button" value="☰" onclick="openNav()"/>
       <div id="gb" class="center"></div>
     </div>
   </body>

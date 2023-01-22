@@ -1,7 +1,7 @@
 .center {
     margin: auto;
     height: 90vh;
-    width: 90vw;
+    width: 100vh;
     box-sizing: content-box;
     border: 3px solid #555;
     padding: 10px;
@@ -33,12 +33,28 @@
     border-width: 0px 2px 2px 2px;
   }
 
+  .sidebar_slider_container {
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    background-color: #444;
+    color: #111;
+    display: block;
+    border-width: 0px 2px 2px 2px;
+    border-style: solid;
+    box-sizing:border-box;
+  }
+
+  .sidebar_slider {
+    width: 90%;
+  }
+
   .sidebar_title {
     padding: 8px 8px 0px 8px;
     width: 100%;
     font-size: 24px;
     font-family: sans-serif;
-    /* text-decoration: underline; */
     background-color: #555;
     color: white;
     display: block;
@@ -55,6 +71,8 @@
     background-color: #444;
     color: white;
     display: block;
+    position: fixed;
+    z-index: 0;
   }
 
   .boot_roms {
@@ -84,3 +102,11 @@
     font-family: sans-serif;
     font-weight: bold;
   }
+
+  /* RFD */
+  #rfd-card {
+    padding: 20px;
+    background-color: #444 !important; 
+    border-radius: 5px;
+    box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%);
+}
