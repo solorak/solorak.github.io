@@ -13,10 +13,6 @@ init().then(() => {
     
     update_bootroms();
 
-    // const save = JSON.parse(localStorage.getItem("WARIOLAND3"));
-    // const vals = new Uint8Array(save)
-    // download("test", vals);
-
     const load_button = document.getElementById("load rom");
     load_button.addEventListener("click", () => {
         handle.load().then(() => {
@@ -49,7 +45,14 @@ init().then(() => {
     download_exram.addEventListener("click", () => {
         var name = handle.get_name()
         var data = new Uint8Array(JSON.parse(localStorage.getItem(name)));
-        download(name, data);
+        download(name + ".sav", data);
+    });
+
+    const export_exram = document.getElementById("export_exram");
+    export_exram.addEventListener("click", () => {
+        var data = handle.export_saves();
+        var data = new Uint8Array(JSON.parse(data));
+        download("gb_export.zip", data);
     });
 });
 

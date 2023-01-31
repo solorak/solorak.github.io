@@ -17,7 +17,7 @@ function download(filename, array) {
   var blob = URL.createObjectURL(new Blob([array.buffer], {type: 'application/octet-stream'}));
   var element = document.createElement('a');
   element.setAttribute('href', blob);
-  element.setAttribute('download', filename + '.sav');
+  element.setAttribute('download', filename);
 
   element.style.display = 'none';
   document.body.appendChild(element);
